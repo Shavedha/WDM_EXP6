@@ -79,13 +79,8 @@ for result in search_results:
     print("Similarity Score:", result[1])
     print("----------------------")
     i=i+1
-    x=result[1]
-for result in search_results:
-    if(result[1]>=x):
-      x=result[1]
-print("The high rank cosine score is",x)
-
-
+```
+```PYTHON
 import requests
 from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -113,10 +108,7 @@ def preprocess_text(text):
 
 # Sample URLs of web pages
 urls = [
-    'https://en.wikipedia.org/wiki/Natural_language_processing',
-    'https://en.wikipedia.org/wiki/Machine_learning',
-    'https://en.wikipedia.org/wiki/Artificial_intelligence','https://www.ibm.com/topics/natural-language-processing','https://en.wikipedia.org/wiki/Amoeba'
-]
+   'https://en.wikipedia.org/wiki/Iron_Man']
 
 # Fetch content from web pages
 webpage_contents = [get_webpage_content(url) for url in urls]
@@ -151,7 +143,7 @@ def search_query_in_webpages(query, tfidf_matrix, tfidf_vectorizer):
     return results
 
 # Example query
-query = "Amoeba"
+query = input()
 
 # Perform search in web pages
 search_results = search_query_in_webpages(query, tfidf_matrix, tfidf_vectorizer)
@@ -165,6 +157,10 @@ for result in search_results:
 
 ```
 ### Output:
+![image](https://github.com/Shavedha/WDM_EXP6/assets/93427376/091619c9-e95a-4d8b-969a-f08a0e9a5f87)
+
+![image](https://github.com/Shavedha/WDM_EXP6/assets/93427376/628a60b7-58b5-4fc0-8b9e-e363270f3c3c)
 
 
 ### Result:
+Thus Information Retrieval Using Vector Space Model is done successfully.
